@@ -1,43 +1,51 @@
-# AWS S3 Static Website Hosting ☁️
+# ☁️ AWS S3 Static Website
 
-A responsive static website hosted using Amazon S3.
+A modern responsive static website hosted on **Amazon S3**, with a custom 404 error page and EC2-to-S3 integration using AWS CLI and IAM.
 
-## 🚀 Project Overview
+## 🌐 Live Website
 
-This project demonstrates how to deploy a static website using Amazon S3 and integrate an EC2 instance with S3 using the AWS CLI.
+👉 [**Visit Live Website**](http://ec2-to-s3-bucket111111.s3-website.ap-south-1.amazonaws.com)
 
-## 🛠️ AWS Services Used
+## 📌 Project Overview
 
-- Amazon S3
-- Amazon EC2
-- AWS IAM
-- AWS CLI
+This project demonstrates the deployment of a static website using Amazon S3.
 
-## ✨ Features
+The website includes:
 
-- Responsive static website
-- Modern HTML/CSS design
+- Modern responsive UI
+- Custom CSS animations
+- Responsive design
 - Custom 404 error page
 - S3 static website hosting
-- EC2 to S3 integration
+- EC2 and S3 integration
+- AWS CLI usage
 - IAM Role-based authentication
-- AWS CLI integration
 
-## 🏗️ Architecture
+## 🏗️ AWS Architecture
 
 ```text
-Laptop
-   │
-   │ SSH
-   ▼
- EC2 Instance
-   │
-   │ AWS CLI
-   ▼
- IAM Role
-   │
-   ▼
- Amazon S3
-   │
-   ├── index.html
-   └── error.html
+                    AWS Cloud
+                       │
+                       │
+                 ┌─────▼─────┐
+                 │    EC2    │
+                 │ Instance  │
+                 └─────┬─────┘
+                       │
+                   AWS CLI
+                       │
+                   IAM Role
+                       │
+                 ┌─────▼─────┐
+                 │    S3     │
+                 │  Bucket   │
+                 └─────┬─────┘
+                       │
+             ┌─────────┴─────────┐
+             │                   │
+        index.html           error.html
+             │                   │
+             └─────────┬─────────┘
+                       │
+                       ▼
+                Static Websitegit add README.md
